@@ -169,6 +169,12 @@
   .card h3{font-family:var(--display);font-weight:600;font-size:1.16rem;margin-bottom:9px}
   .card p{font-size:.95rem;color:var(--muted)}
   .card .corner{position:absolute;top:14px;right:16px;font-family:var(--mono);font-size:.72rem;color:var(--faint)}
+  .card .ico.emoji{font-size:24px;line-height:1}
+  .card .tag{font-family:var(--mono);font-size:.72rem;color:var(--green-bright);display:block;margin:-3px 0 9px}
+  .feats{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .feats li{font-family:var(--mono);font-size:.74rem;color:var(--muted);background:var(--bg);
+    border:1px solid var(--line-soft);border-radius:7px;padding:5px 10px;transition:border-color .3s,color .3s}
+  .card:hover .feats li{border-color:var(--line);color:var(--text)}
 
   /* ---------- approche ---------- */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
@@ -286,7 +292,8 @@
       <b>PRISME<span>LOGICIELS</span></b>
     </a>
     <nav class="nav-links" aria-label="Navigation principale">
-      <a href="#services">Expertises</a>
+      <a href="#produits">Produits</a>
+      <a href="#services">Services</a>
       <a href="#approche">Méthode</a>
       <a href="#stack">Technologies</a>
       <a href="#pourquoi">Pourquoi nous</a>
@@ -297,7 +304,8 @@
   </div>
 </header>
 <div class="mobile-panel" id="mobilePanel">
-  <a href="#services">Expertises</a>
+  <a href="#produits">Produits</a>
+  <a href="#services">Services</a>
   <a href="#approche">Méthode</a>
   <a href="#stack">Technologies</a>
   <a href="#pourquoi">Pourquoi nous</a>
@@ -367,49 +375,146 @@
   </div>
 </section>
 
+<!-- ============ PRODUITS ============ -->
+<section class="sec" id="produits">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="slash">//</span> Édition de logiciels</span>
+      <h2>Nos solutions Prisme, prêtes à déployer.</h2>
+    </div>
+    <div class="cards">
+      <article class="card reveal d2">
+        <span class="corner">01</span>
+        <div class="ico emoji">🚀</div>
+        <h3>Prisme Recrutement</h3>
+        <span class="tag">Plateforme de recrutement</span>
+        <p>Recrutez plus vite avec un suivi de bout en bout.</p>
+        <ul class="feats">
+          <li>Candidatures</li><li>Tests en ligne</li><li>Évaluation</li><li>Tableaux de bord RH</li>
+        </ul>
+      </article>
+      <article class="card reveal d2">
+        <span class="corner">02</span>
+        <div class="ico emoji">🏥</div>
+        <h3>Prisme Santé</h3>
+        <span class="tag">Gestion de clinique</span>
+        <p>Logiciel complet de gestion médicale et hospitalière.</p>
+        <ul class="feats">
+          <li>Dossiers patients</li><li>Consultations</li><li>Prescriptions</li>
+          <li>Facturation</li><li>Laboratoire</li><li>Pharmacie</li>
+        </ul>
+      </article>
+      <article class="card reveal d1">
+        <span class="corner">03</span>
+        <div class="ico emoji">🏫</div>
+        <h3>Prisme École</h3>
+        <span class="tag">Gestion scolaire</span>
+        <p>Solution complète pour piloter votre établissement de A à Z.</p>
+        <ul class="feats">
+          <li>Inscriptions</li><li>Paiements</li><li>Bulletins</li>
+          <li>Emplois du temps</li><li>Enseignants</li><li>SMS aux parents</li>
+        </ul>
+      </article>
+      <article class="card reveal d3">
+        <span class="corner">04</span>
+        <div class="ico emoji">👥</div>
+        <h3>Prisme RH</h3>
+        <span class="tag">Ressources humaines</span>
+        <p>Gestion des ressources humaines de bout en bout.</p>
+        <ul class="feats">
+          <li>Personnel</li><li>Congés</li><li>Présence</li>
+          <li>Paie</li><li>Évaluations</li>
+        </ul>
+      </article>
+      <article class="card reveal d1">
+        <span class="corner">05</span>
+        <div class="ico emoji">📦</div>
+        <h3>Prisme Stock</h3>
+        <span class="tag">Stock &amp; ventes</span>
+        <p>Maîtrisez vos stocks, vos achats et vos ventes.</p>
+        <ul class="feats">
+          <li>Inventaire</li><li>Approvisionnement</li><li>Facturation</li><li>Rapports</li>
+        </ul>
+      </article>
+      
+      <article class="card reveal d3">
+        <span class="corner">06</span>
+        <div class="ico emoji">📄</div>
+        <h3>Prisme GED</h3>
+        <span class="tag">Gestion documentaire</span>
+        <p>Gestion électronique de tous vos documents.</p>
+        <ul class="feats">
+          <li>Archivage</li><li>Recherche</li><li>Validation</li><li>Workflow documentaire</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
 <!-- ============ SERVICES ============ -->
 <section class="sec" id="services">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow"><span class="slash">//</span> Ce que nous faisons</span>
-      <h2>Des expertises qui couvrent tout le cycle de vie de votre logiciel.</h2>
+      <h2>Des services qui couvrent tout le cycle de vie de votre logiciel.</h2>
     </div>
     <div class="cards">
       <article class="card reveal d1">
         <span class="corner">01</span>
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></div>
-        <h3>Développement web sur mesure</h3>
-        <p>Plateformes et applications web robustes, de l'architecture au déploiement, avec Symfony et React.</p>
+        <div class="ico emoji">⚙️</div>
+        <h3>Développement sur mesure</h3>
+        <span class="tag">Sur mesure</span>
+        <p>Applications professionnelles adaptées à vos besoins métier.</p>
+        <ul class="feats">
+          <li>Applications web</li><li>Applications mobiles</li>
+          <li>Portails &amp; plateformes</li><li>API &amp; intégration</li>
+        </ul>
       </article>
       <article class="card reveal d2">
         <span class="corner">02</span>
-        <div class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></div>
-        <h3>Applications mobiles &amp; PWA</h3>
-        <p>Des apps rapides et accessibles, conçues pour fonctionner même en connexion limitée.</p>
+        <div class="ico emoji">☁️</div>
+        <h3>Solutions Cloud &amp; SaaS</h3>
+        <span class="tag">Cloud &amp; SaaS</span>
+        <p>Hébergement, logiciels en abonnement et migration vers le cloud.</p>
+        <ul class="feats">
+          <li>Hébergement sécurisé</li><li>Sauvegardes</li><li>Monitoring</li>
+          <li>SaaS</li><li>Migration cloud</li>
+        </ul>
       </article>
       <article class="card reveal d3">
         <span class="corner">03</span>
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
-        <h3>Données &amp; statistiques</h3>
-        <p>Collecte, traitement, visualisation et anonymisation de vos données pour éclairer chaque décision.</p>
+        <div class="ico emoji">🤖</div>
+        <h3>Intelligence artificielle</h3>
+        <span class="tag">IA</span>
+        <p>Chatbots, analyse de données et automatisation des processus.</p>
+        <ul class="feats">
+          <li>Chatbots IA</li><li>Analyse &amp; prévisions</li>
+          <li>Tableaux de bord</li><li>Traitement de documents</li>
+        </ul>
       </article>
       <article class="card reveal d1">
         <span class="corner">04</span>
-        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/></svg></div>
+        <div class="ico emoji">🔄</div>
         <h3>Transformation digitale</h3>
-        <p>Audit, dématérialisation (GED) et accompagnement Agile/ITIL pour moderniser vos processus.</p>
+        <span class="tag">Transformation</span>
+        <p>Audit, dématérialisation et conseil pour moderniser vos processus.</p>
+        <ul class="feats">
+          <li>Audit informatique</li><li>Dématérialisation</li>
+          <li>Conseil &amp; stratégie</li><li>Formation</li>
+        </ul>
       </article>
       <article class="card reveal d2">
-      <span class="corner">05</span>
-      <div class="ico"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 12l10-6M7 12l10 6"/></svg></div>
-      <h3>Intelligence artificielle</h3>
-      <p>Chatbots, traitement automatique de documents et analyse prédictive : nous intégrons l'IA à vos outils pour automatiser les tâches répétitives et éclairer vos décisions.</p>
-    </article>
-      <article class="card reveal d3">
-        <span class="corner">06</span>
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-        <h3>SIG &amp; cartographie</h3>
-        <p>Solutions géospatiales pour le suivi terrain, la planification et l'analyse territoriale.</p>
+        <span class="corner">05</span>
+        <div class="ico emoji">🛠️</div>
+        <h3>Support &amp; maintenance</h3>
+        <span class="tag">Support</span>
+        <p>Maintenance, assistance et formation dans la durée.</p>
+        <ul class="feats">
+          <li>Corrective</li><li>Évolutive</li>
+          <li>Assistance utilisateurs</li><li>Formation</li>
+        </ul>
       </article>
     </div>
   </div>
@@ -516,11 +621,21 @@
         <div class="field">
           <label for="type">Type de projet</label>
           <select id="type" name="type">
-            <option>Application web</option>
-            <option>Application mobile / PWA</option>
-            <option>Plateforme de données &amp; statistiques</option>
-            <option>Transformation digitale / conseil</option>
-            <option>SIG &amp; cartographie</option>
+            <optgroup label="Produits Prisme">
+              <option>Prisme École — gestion scolaire</option>
+              <option>Prisme Santé — gestion de clinique</option>
+              <option>Prisme RH — ressources humaines</option>
+              <option>Prisme Stock — stock &amp; ventes</option>
+              <option>Prisme Recrutement</option>
+              <option>Prisme GED — gestion documentaire</option>
+            </optgroup>
+            <optgroup label="Services">
+              <option>Développement sur mesure</option>
+              <option>Solutions Cloud &amp; SaaS</option>
+              <option>Intelligence artificielle</option>
+              <option>Transformation digitale / conseil</option>
+              <option>Support &amp; maintenance</option>
+            </optgroup>
             <option>Autre</option>
           </select>
         </div>
@@ -542,7 +657,8 @@
       </div>
       <div class="foot-col">
         <h4>NAVIGATION</h4>
-        <a href="#services">Expertises</a>
+        <a href="#produits">Produits</a>
+        <a href="#services">Services</a>
         <a href="#approche">Méthode</a>
         <a href="#stack">Technologies</a>
         <a href="#pourquoi">Pourquoi nous</a>
