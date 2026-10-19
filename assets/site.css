@@ -150,11 +150,6 @@
   .lineup a.is-main::before{background:var(--accent)}
 
   /* références clients : noms en texte (aucun logo sans fichier officiel ni accord graphique) */
-  .refs{padding:30px 0;border-bottom:1px solid var(--line-soft)}
-  .refs .wrap{display:flex;align-items:center;justify-content:center;gap:16px 44px;flex-wrap:wrap}
-  .refs-label{font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
-  .refs ul{list-style:none;display:flex;align-items:center;justify-content:center;gap:12px 44px;flex-wrap:wrap}
-  .refs li{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 108;font-size:1.14rem;letter-spacing:-.01em;color:var(--muted)}
 
   /* ---------- sections ---------- */
   section{position:relative}
@@ -490,3 +485,44 @@
     .nav-links,.nav-right .btn-primary{display:none}
     .menu-btn{display:flex}
   }
+
+  /* ================= clients : bandeau de logos défilant ================= */
+  .clients{padding:34px 0 40px;border-bottom:1px solid var(--line-soft)}
+  .clients-title{text-align:center;margin-bottom:22px;font-family:var(--body);font-weight:600;font-size:.74rem;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+  .marquee{overflow:hidden;padding:4px 0;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+  .marquee-track{list-style:none;display:flex;width:max-content;animation:defile 38s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-track li{flex:none;margin-right:20px}
+  .logo-tile{display:flex;align-items:center;justify-content:center;width:216px;height:104px;border-radius:16px;
+    background:#fff;border:1px solid var(--line-soft);box-shadow:0 1px 2px rgba(15,31,48,.06),0 8px 22px -14px rgba(15,31,48,.25);
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .logo-tile:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(15,31,48,.06),0 14px 28px -14px rgba(15,31,48,.35)}
+  .logo-tile img{display:block;width:auto;height:auto;max-width:150px;max-height:72px}
+  .logo-onu-femmes img{max-width:156px;max-height:46px}
+  :root:not([data-theme="light"]) .logo-tile{border-color:transparent}
+  @keyframes defile{to{transform:translateX(-50%)}}
+  @media(max-width:680px){
+    .logo-tile{width:168px;height:86px;border-radius:14px}
+    .logo-tile img{max-width:118px;max-height:58px}
+    .logo-onu-femmes img{max-width:124px;max-height:36px}
+    .marquee-track{animation-duration:30s}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .marquee{-webkit-mask-image:none;mask-image:none}
+    .marquee-track{width:auto;flex-wrap:wrap;justify-content:center;gap:16px;animation:none}
+    .marquee-track li{margin:0}
+    .marquee-track .dup{display:none}
+  }
+  .logo-afrc-bunkasa-karkara img{max-height:82px}
+  /* thème sombre : fondu court, sinon les tuiles blanches s'estompent en gris */
+  :root:not([data-theme="light"]) .marquee{
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+  @media(max-width:680px){.logo-afrc-bunkasa-karkara img{max-height:66px}}
+  /* bandeau pleine largeur : en sombre, les tuiles sortent par les bords de l'écran, sans fondu */
+  .marquee{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+                   mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  :root:not([data-theme="light"]) .marquee{-webkit-mask-image:none;mask-image:none}
